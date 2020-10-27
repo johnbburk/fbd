@@ -1,5 +1,6 @@
 import React from 'react'
 
+//hook is working
 export const useSvgDnD = (position, setPosition) => {
   const handleMouseMove = React.useRef(e => {
     setPosition(position => {
