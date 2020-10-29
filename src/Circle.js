@@ -2,7 +2,7 @@ import React from "react"
 import {useState, useRef} from "react"
 import {useSvgDnD} from "./useSVGDnD"
 
- const Circle = () => {
+ const Circle = (props) => {
     const [position, setPosition] = useState({x: 50, y: 50, coords: {}})
     const [handleMouseDown, handleMouseUp] = useSvgDnD(position, setPosition)
 
@@ -24,8 +24,8 @@ import {useSvgDnD} from "./useSVGDnD"
         </marker>
       </defs>
       <line
-        x1="200"
-        y1="100"
+        x1={props.x}
+        y1={props.y}
         x2={position.x}
         y2={position.y}
         stroke="#000"
