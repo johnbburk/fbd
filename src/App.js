@@ -1,8 +1,13 @@
-import React from "react"
-import Circle from "./Circle"
+import React, {useState} from "react"
+import Arrow from "./Arrow"
+import Grid from "./Grid"
 
  const App = () => {
+     const [circles, createCircle]=useState([<Arrow x="50" y="100"/>,
+     <Arrow x="50" y="100"/>])
     return (
+        <div>
+            <button onClick={()=>createCircle([...circles, <Arrow x="50" y="100"/>])}>Add Force</button> 
       <svg
         style={{
           border: '1px solid green',
@@ -10,9 +15,10 @@ import Circle from "./Circle"
           width: '100%',
         }}
       >
-        <Circle />
-        <Circle />
+          <Grid/>
+          {circles.map((child) => child)}
       </svg>
+      </div>
     )
   }
 
