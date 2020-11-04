@@ -1,13 +1,15 @@
 import React, {useState} from "react"
 import Arrow from "./Arrow"
+import ArrowForm from "./ArrowForm"
 import Grid from "./Grid"
 
 
  const App = () => {
-     const [arrows, createArrow]=useState([<Arrow x="75" y="100"/>])
+     const [arrows, createArrow]=useState([<Arrow/>])
     return (
         <div>
-            <button onClick={()=>createArrow([...arrows, <Arrow x="75" y="100"/>])}>Add Force</button> 
+            <button onClick={()=>createArrow(arrows => [...arrows, <Arrow/>])}>Add Force</button> 
+            <ArrowForm arrows = {arrows} newArrow={createArrow} />
       <svg
         style={{
           border: '1px solid green',
