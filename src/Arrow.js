@@ -2,13 +2,10 @@ import React from "react"
 import {useState, useRef} from "react"
 import {useSvgDnD} from "./useSVGDnD"
 
- const Circle = (props) => {
-    const [position, setPosition] = useState({x: 50, y: 50, coords: {}})
+ const Arrow = (props) => {
+    const [position, setPosition] = useState({x: props.x2, y: props.y2, coords: {}})
     const [handleMouseDown, handleMouseUp] = useSvgDnD(position, setPosition)
 
-    //const [position, setPosition] = useState({x: 50, y: 50, coords: {}})
-  
-  
     return (
       <svg>
       <defs>
@@ -50,4 +47,11 @@ import {useSvgDnD} from "./useSVGDnD"
     )
   }
 
-  export default Circle
+  Arrow.defaultProps={
+    x: 100,
+    y: 100,
+    x2: 200,
+    y2: 150
+  }
+
+  export default Arrow
