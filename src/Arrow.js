@@ -26,8 +26,8 @@ import {useSvgDnD} from "./useSVGDnD"
         x2={position.x}
         y2={position.y}
         stroke="#000"
-        stroke-width="1"
-        marker-end="url(#arrowhead)"
+        strokeWidth="1"
+        markerEnd="url(#arrowhead)"
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
       />
@@ -35,8 +35,8 @@ import {useSvgDnD} from "./useSVGDnD"
         cx={position.x}
         cy={position.y}
         r={25}
-        fill-opacity="0"
-        stroke-opacity="0"
+        fillOpacity="0"
+        strokeOpacity="0"
         fill="black"
         stroke="black"
         strokeWidth="1"
