@@ -4,11 +4,10 @@ import Grid from "./Grid"
 
 
  const App = () => {
-     const [circles, createCircle]=useState([<Arrow x="75" y="100"/>,
-     <Arrow x="50" y="100"/>])
+     const [arrows, createArrow]=useState([<Arrow x="75" y="100"/>])
     return (
         <div>
-            <button onClick={()=>createCircle([...circles, <Arrow x="75" y="100"/>])}>Add Force</button> 
+            <button onClick={()=>createArrow([...arrows, <Arrow x="75" y="100"/>])}>Add Force</button> 
       <svg
         style={{
           border: '1px solid green',
@@ -17,7 +16,7 @@ import Grid from "./Grid"
         }}
       >
           <Grid/>
-          {circles.map((child) => child)}
+          {arrows.map((child) => child)}
       </svg>
       </div>
     )
