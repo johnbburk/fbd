@@ -1,0 +1,1 @@
+export const ORIGIN = {x:100, y:100}

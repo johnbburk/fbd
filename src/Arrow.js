@@ -1,11 +1,12 @@
 import React from "react"
 import {useState, useRef} from "react"
 import {useSvgDnD} from "./useSVGDnD"
+import {ORIGIN} from "./constants"
 
  const Arrow = (props) => {
     const [position, setPosition] = useState({x: props.x2, y: props.y2, coords: {}})
     const [handleMouseDown, handleMouseUp] = useSvgDnD(position, setPosition)
-
+    console.log("Origin", ORIGIN.x)
     return (
       <svg>
       <defs>
@@ -48,8 +49,8 @@ import {useSvgDnD} from "./useSVGDnD"
   }
 
   Arrow.defaultProps={
-    x: 100,
-    y: 100,
+    x: ORIGIN.x,
+    y: ORIGIN.y,
     x2: 200,
     y2: 150
   }
